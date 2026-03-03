@@ -1,7 +1,7 @@
 import React from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
-import phjoiasCapa from '../assets/projects/phjoias-capa.jpg';
-import techCapa from '../assets/projects/tech-capa.jpg';
+import phjoiasCapa from '../assets/projects/phjoias-capa.webp';
+import techCapa from '../assets/projects/tech-capa.webp';
 import './Projects.css';
 
 const Projects = () => {

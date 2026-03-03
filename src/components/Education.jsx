@@ -2,11 +2,11 @@ import React from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
 import './Education.css';
 
-import cert1 from '../assets/certificates/CERTIFICADO CURSO SENAI I.A.jpg';
-import cert2 from '../assets/certificates/Implementação_de_Negócios_Inovadores-Certificado_4060.jpg';
-import cert3 from '../assets/certificates/Modelagem_de_Projetos_de_Inovação-Certificado_4061.jpg';
-import cert4 from '../assets/certificates/Criatividade_e_Ideação_em_Projetos_de_Inovação-Certificado_4058.jpg';
-import cert5 from '../assets/certificates/Desvendando_a_Indústria_4.0___Visão_Geral-Certificado_4059_page-0001.jpg';
+import cert1 from '../assets/certificates/CERTIFICADO CURSO SENAI I.A.webp';
+import cert2 from '../assets/certificates/Implementação_de_Negócios_Inovadores-Certificado_4060.webp';
+import cert3 from '../assets/certificates/Modelagem_de_Projetos_de_Inovação-Certificado_4061.webp';
+import cert4 from '../assets/certificates/Criatividade_e_Ideação_em_Projetos_de_Inovação-Certificado_4058.webp';
+import cert5 from '../assets/certificates/Desvendando_a_Indústria_4.0___Visão_Geral-Certificado_4059_page-0001.webp';
 
 const certs = [
     { title: "Inteligência Artificial na Prática", org: "IEL/AL", img: cert1 },

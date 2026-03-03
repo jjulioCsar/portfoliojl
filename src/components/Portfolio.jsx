@@ -3,14 +3,14 @@ import useScrollReveal from '../hooks/useScrollReveal';
 import './Portfolio.css';
 
 // Importing assets for the carousel
-import img1 from '../assets/webp/DIA DO CONSUMIDOR.jpg';
-import img2 from '../assets/webp/DIAS DAS MULHERES.jpg';
-import img3 from '../assets/webp/POST TAMP.jpg';
-import img4 from '../assets/webp/capa tech.jpg';
-import img5 from '../assets/webp/POST 1 TAMP.jpg';
-import img6 from '../assets/webp/POST 1 TECH.jpg';
-import img7 from '../assets/webp/CAPA ANUNCIO PROMOÇÃO - SEM VIP.jpg';
-import img8 from '../assets/webp/79.jpg';
+import img1 from '../assets/webp/DIA DO CONSUMIDOR.webp';
+import img2 from '../assets/webp/DIAS DAS MULHERES.webp';
+import img3 from '../assets/webp/POST TAMP.webp';
+import img4 from '../assets/webp/capa tech.webp';
+import img5 from '../assets/webp/POST 1 TAMP.webp';
+import img6 from '../assets/webp/POST 1 TECH.webp';
+import img7 from '../assets/webp/CAPA ANUNCIO PROMOÇÃO - SEM VIP.webp';
+import img8 from '../assets/webp/79.webp';
 
 const portfolioImages = [
     { id: 1, src: img1, title: "", category: "DESIGN" },
