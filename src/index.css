@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Ultra Premium Dark Theme Colors */
+  --bg-main: #050505;
+  --bg-alt: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  /* Glassmorphism base */
+
+  --primary-color: #4169E1;
+  /* Royal Blue */
+  --primary-glow: rgba(65, 105, 225, 0.3);
+
+  --text-main: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-inverse: #050505;
+
+  /* Bento Borders */
+  --bento-border: 1px solid rgba(255, 255, 255, 0.08);
+  --bento-radius: 24px;
+
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Styles & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Oversized Brutalist Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: 800;
+  /* Extra bold */
+  letter-spacing: -0.04em;
+  /* Tight tracking */
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  /* Balanced massive text */
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: 1650px;
+  /* Increased for Ultra-Wide feel */
+  margin: 0 auto;
+  padding: 0 4rem;
+  /* More horizontal breathing room */
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: var(--transition);
+  letter-spacing: -0.01em;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 40px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  background-color: #5c82ff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 50px var(--primary-glow);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Glow Effects */
+.btn-glow {
+  position: relative;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.btn-glow:hover::before {
+  opacity: 0.8;
+}
+
+/* Section styling */
+section {
+  padding: 8rem 0;
+  /* Reduced from 10rem to fix the irregular gaps */
+  position: relative;
+  z-index: 1;
+}
+
+.section-alt {
+  background-color: transparent;
+  /* Rely on deep background */
+}
+
+/* Minimalist Subtitle line */
+.section-subtitle {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+/* Modern Image Placeholder Base for Dark Mode */
+.img-placeholder {
+  background-color: var(--bg-alt);
+  border: var(--bento-border);
+  border-radius: var(--bento-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.img-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Premium Animations & Effects */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+/* Premium Hover Lift Effect */
+.css-hover-lift {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.css-hover-lift:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5), 0 0 40px rgba(65, 105, 225, 0.1) inset;
+  border-color: rgba(255, 255, 255, 0.2);
+}

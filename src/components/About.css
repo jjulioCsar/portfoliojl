@@ -1,0 +1,243 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+}
+
+.about-img-container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: var(--bento-radius);
+    overflow: hidden;
+    position: relative;
+    border: var(--bento-border);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    transform: rotate(2deg);
+    transition: var(--transition);
+}
+
+.about-img-container:hover {
+    transform: rotate(0) scale(1.02);
+}
+
+.about-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 40%);
+}
+
+.about-badge {
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: rgba(255, 255, 255, 0.08) 1px solid;
+    color: var(--text-main);
+    padding: 1.5rem;
+    border-radius: var(--bento-radius);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px inset rgba(255, 255, 255, 0.05);
+    animation: float 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+.badge-number {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px var(--primary-glow);
+}
+
+.badge-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text-secondary);
+}
+
+.about-title {
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    /* Slightly larger */
+    max-width: 900px;
+}
+
+.about-title span {
+    color: var(--primary-color);
+}
+
+.about-features {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.about-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    padding: 1rem;
+    background: var(--bg-card);
+    border: var(--bento-border);
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.about-features li:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(10px);
+}
+
+.about-features svg {
+    color: var(--primary-color);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        /* Reduced gap */
+    }
+
+    .about-image-wrapper {
+        margin: 0 auto;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .about-badge {
+        bottom: -2rem;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: max-content;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-title {
+        text-align: center !important;
+    }
+
+    .about-features {
+        align-items: center;
+    }
+
+    .about-features li {
+        width: 100%;
+        max-width: 400px;
+        justify-content: flex-start;
+    }
+}
+
+.about {
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-glow-about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vh;
+    background: radial-gradient(circle, rgba(65, 105, 225, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-content-centered {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-title {
+    margin: 1.5rem 0 3rem;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-description p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+    .about {
+        padding: 6rem 0;
+    }
+
+    .about-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+        margin-bottom: 2rem;
+    }
+
+    .about-description p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 1.6rem;
+    }
+
+    .about-description p {
+        font-size: 0.9rem;
+    }
+}

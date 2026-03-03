@@ -1,0 +1,200 @@
+.hero {
+    padding: 10rem 0 0;
+    /* No bottom padding to let photo touch the edge if needed */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: clip;
+    background-color: var(--bg-main);
+}
+
+.bg-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 60% 40%, rgba(65, 105, 225, 0.18) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 0;
+    /* Gap managed by padding for better overlap control */
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    padding-right: 4rem;
+    z-index: 10;
+}
+
+.hero-title {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: clamp(2.5rem, 5.2vw, 4.2rem);
+    /* More controlled scaling */
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+    text-shadow: 0 0 50px rgba(65, 105, 225, 0.4);
+    display: block;
+    /* Break the last line for better rhythm */
+}
+
+.hero-description {
+    font-size: 1.35rem;
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    max-width: 600px;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    /* Massive photo impact */
+    margin-right: 0;
+}
+
+.hero-main-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 20px 80px rgba(0, 0, 0, 0.6));
+    mask-image: linear-gradient(to top, transparent 5%, black 25%);
+    /* Cleaner fade than overlay */
+}
+
+.hero-photo-fade {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, var(--bg-main) 10%, transparent 100%);
+    z-index: 2;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 2rem;
+    /* Increased spacing */
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 10rem 0 4rem;
+        min-height: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding-top: 5rem;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .section-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        display: flex !important;
+        flex-direction: row !important;
+        /* Force side-by-side */
+        flex-wrap: nowrap !important;
+        /* No wrapping */
+        gap: 1.5rem !important;
+        /* Substantial gap even on mobile */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+        flex: 0 1 auto;
+        white-space: nowrap;
+        min-width: fit-content;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+    }
+
+    .hero-img {
+        aspect-ratio: 1/1;
+        max-width: 450px;
+        border-radius: 50%;
+        /* Make circular on mobile for variation */
+    }
+
+    .hero-photo-wrapper {
+        width: 80%;
+        max-width: 350px;
+        order: -1;
+    }
+
+    .bg-glow {
+        background: radial-gradient(circle at 50% 50%, rgba(65, 105, 225, 0.22) 0%, transparent 65%);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-cta {
+        gap: 1rem !important;
+        /* Slightly smaller gap for very small screens */
+    }
+
+    .hero-cta .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+}

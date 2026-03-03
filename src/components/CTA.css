@@ -1,0 +1,136 @@
+.cta {
+    padding: 10rem 0;
+    background-color: var(--bg-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: var(--bento-border);
+    border-bottom: var(--bento-border);
+    color: var(--text-main);
+    text-align: center;
+    position: relative;
+    overflow-x: clip;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150vw;
+    height: 150vw;
+    max-width: 1200px;
+    max-height: 1200px;
+    background: radial-gradient(circle, rgba(65, 105, 225, 0.12) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta h2 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin: 1.5rem 0 2rem;
+    line-height: 1.05;
+}
+
+.cta h2 span {
+    color: var(--primary-color);
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta p {
+    font-size: 1.35rem;
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    max-width: 750px;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+    border-radius: 9999px;
+    /* Max pill */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 0 40px rgba(37, 211, 102, 0.3);
+    transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebd5a;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(37, 211, 102, 0.4);
+}
+
+.btn-linkedin {
+    background-color: rgba(10, 102, 194, 0.1);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid #0A66C2;
+    transition: var(--transition);
+}
+
+.btn-linkedin:hover {
+    background-color: #0A66C2;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(10, 102, 194, 0.4);
+}
+
+.btn-instagram {
+    background-color: rgba(225, 48, 108, 0.1);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid #E1306C;
+    transition: var(--transition);
+}
+
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(225, 48, 108, 0.4);
+}
+
+@media (max-width: 600px) {
+
+    .btn-whatsapp,
+    .btn-linkedin,
+    .btn-instagram {
+        width: 100%;
+        justify-content: center;
+    }
+}

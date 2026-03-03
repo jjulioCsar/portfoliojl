@@ -1,0 +1,50 @@
+.marquee-container {
+    width: 110vw;
+    /* Wider than viewport to prevent edge cut-off when rotated */
+    margin-left: -5vw;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: var(--bg-main);
+    padding: 1.5rem 0;
+    position: relative;
+    border-top: var(--bento-border);
+    border-bottom: var(--bento-border);
+    transform: rotate(-1.5deg) scale(1.02);
+    /* More subtle rotation */
+    margin: 5rem 0;
+    z-index: 10;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee-scroll 40s linear infinite;
+    /* Slower for premium feel */
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.marquee-content span {
+    padding-right: 2rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.marquee-content .dot {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 2.5rem;
+    margin: 0 2rem;
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

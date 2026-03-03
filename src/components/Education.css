@@ -1,0 +1,279 @@
+.education {
+    padding: 8rem 0;
+    background-color: transparent;
+}
+
+.education-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.education-column h3 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-main);
+}
+
+/* Column Card */
+.column-card {
+    background: var(--bg-card);
+    border: var(--bento-border);
+    border-radius: var(--bento-radius);
+    padding: 2.5rem;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.column-card:hover {
+    border-color: rgba(65, 105, 225, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
+    margin-left: 1rem;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    left: -2.4rem;
+    top: 6px;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.timeline-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.timeline-org {
+    display: block;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--bento-border);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    background-color: rgba(65, 105, 225, 0.15);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(65, 105, 225, 0.2);
+}
+
+/* Certifications Section */
+.certifications-section {
+    margin-top: 5rem;
+}
+
+.certifications-section h3 {
+    font-size: 1.75rem;
+    color: var(--text-main);
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.cert-card {
+    background: var(--bg-card);
+    border: var(--bento-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(65, 105, 225, 0.15);
+}
+
+.cert-badge {
+    width: 44px;
+    height: 44px;
+    background: rgba(65, 105, 225, 0.1);
+    color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cert-card:hover .cert-badge {
+    background: var(--primary-color);
+    color: white;
+}
+
+.cert-info h4 {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.cert-info span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: block;
+}
+
+.cert-zoom-hint {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    color: var(--text-secondary);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: var(--transition);
+}
+
+.cert-card:hover .cert-zoom-hint {
+    opacity: 0.6;
+    transform: scale(1);
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 992px) {
+    .education {
+        padding: 5rem 0;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .education-column h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .column-card {
+        padding: 1.5rem;
+    }
+
+    .timeline {
+        gap: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .skill-card {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .timeline-item h4 {
+        font-size: 0.95rem;
+    }
+
+    .timeline-org {
+        font-size: 0.8rem;
+    }
+
+    .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .certs-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .cert-card {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .cert-info h4 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .skill-card {
+        font-size: 0.8rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .timeline-item h4 {
+        font-size: 0.85rem;
+    }
+}

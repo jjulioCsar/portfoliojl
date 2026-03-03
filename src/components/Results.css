@@ -1,0 +1,133 @@
+.results {
+    padding: 8rem 0;
+    background-color: transparent;
+}
+
+.results-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.metric-card-royal {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--bento-border);
+    border-radius: var(--bento-radius);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--text-main);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Inner glow for metric cards */
+.metric-card-royal::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(65, 105, 225, 0.15) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: opacity 0.5s ease;
+    opacity: 0.5;
+}
+
+.metric-card-royal:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(65, 105, 225, 0.2) inset;
+    border-color: rgba(65, 105, 225, 0.4);
+}
+
+.metric-card-royal:hover::after {
+    opacity: 1;
+}
+
+.metric-value-royal {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(65, 105, 225, 0.4);
+}
+
+.metric-label-royal {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.metric-desc-royal {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    /* Improved contrast */
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .results-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .metric-value-royal {
+        font-size: 2.2rem;
+    }
+
+    .metric-label-royal {
+        font-size: 0.9rem;
+    }
+
+    .metric-desc-royal {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .results-grid {
+        gap: 1rem;
+    }
+
+    .metric-card-royal {
+        padding: 1.5rem 1rem;
+    }
+
+    .metric-value-royal {
+        font-size: 1.8rem;
+    }
+
+    .metric-label-royal {
+        font-size: 0.8rem;
+    }
+
+    .metric-desc-royal {
+        display: none;
+    }
+}
