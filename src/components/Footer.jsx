@@ -1,5 +1,5 @@
 import React from 'react';
-import logoSemCor from '../assets/personal/LOGO - SEM COR.png';
+import logoSemCor from '../assets/personal/LOGO - SEM COR.webp';
 import './Footer.css';
 
 const Footer = () => {

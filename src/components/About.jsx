@@ -1,6 +1,6 @@
 import React from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
-import aboutImg from '../assets/webp/capa tamp.jpg';
+import aboutImg from '../assets/webp/capa tamp.webp';
 import './About.css';
 
 const About = () => {

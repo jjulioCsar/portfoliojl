@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logoSemCor from '../assets/personal/LOGO - SEM COR.png';
+import logoSemCor from '../assets/personal/LOGO - SEM COR.webp';
 import './Navbar.css';
 
 const Navbar = () => {
