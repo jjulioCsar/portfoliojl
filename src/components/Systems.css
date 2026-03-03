@@ -1,0 +1,122 @@
+.systems {
+    padding: var(--section-spacing) 0;
+    position: relative;
+    z-index: 2;
+}
+
+.systems-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.systems-disclaimer {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.system-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.system-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(67, 97, 238, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(67, 97, 238, 0.1);
+}
+
+.system-icon-wrapper {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(67, 97, 238, 0.2);
+    transition: all 0.3s ease;
+}
+
+.system-card:hover .system-icon-wrapper {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.system-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.system-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    /* Pushes the button to the bottom */
+}
+
+.btn-system {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
+}
+
+.btn-system:hover {
+    color: #fff;
+    border-bottom-color: var(--primary);
+}
+
+.btn-system svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-system:hover svg {
+    transform: translate(4px, -4px);
+}
+
+/* Mobile specific styling */
+@media (max-width: 768px) {
+    .systems-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .system-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .system-card:hover {
+        transform: translateY(-4px);
+        /* Smaller lift on mobile */
+    }
+}

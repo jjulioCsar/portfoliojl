@@ -7,6 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Education from './components/Education';
 import Portfolio from './components/Portfolio';
+import Systems from './components/Systems';
 import Results from './components/Results';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
@@ -40,6 +41,7 @@ function App() {
         <Services />
         <Education openLightbox={openLightbox} />
         <Portfolio openLightbox={openLightbox} />
+        <Systems />
         <Results />
         <CTA />
       </main>
