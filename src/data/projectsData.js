@@ -74,7 +74,7 @@ export const projectsData = {
             'Posicionamento de marca e tom de voz exclusivo',
             'Planejamento de conteúdo voltado ao desejo e luxo',
             'Identidade visual estratégica para redes sociais',
-            'Gestão de tráfego pago (Meta Ads e Google Ads)',
+            'Gestão de tráfego pago (Meta Ads)',
             'Análise de métricas em tempo real para tomada de decisão',
             'Promoções e eventos digitais sazonais sincronizados'
         ],

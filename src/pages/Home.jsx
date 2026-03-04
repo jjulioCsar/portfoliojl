@@ -12,6 +12,7 @@ import Systems from '../components/Systems';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import Lightbox from '../components/common/Lightbox';
+import WhatsAppFAB from '../components/WhatsAppFAB';
 
 const Home = () => {
     const [lightbox, setLightbox] = useState({ isOpen: false, image: null });
@@ -46,6 +47,8 @@ const Home = () => {
                 image={lightbox.image}
                 onClose={closeLightbox}
             />
+
+            <WhatsAppFAB />
         </>
     );
 };
