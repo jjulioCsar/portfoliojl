@@ -15,14 +15,14 @@ const About = () => {
                     <div className="about-text-content">
                         <span className="section-subtitle">Visão Estratégica</span>
                         <h2 className="about-title">
-                            Muito além do operacional, eu traciono o <span>crescimento sustentável</span> das empresas.
+                            Atuação executiva como <span>Consultor Estratégico</span> independente.
                         </h2>
                         <div className="about-description">
                             <p>
-                                Atuo estrategicamente integrando design, tráfego pago e tecnologia para estruturar ecossistemas digitais que convertem. Minha abordagem é focada na construção de autoridade de marca e no reconhecimento de mercado com alto potencial de conversão qualificada.
+                                Não atuando como funcionário, mas como um parceiro de negócios, eu atendo marcas da indústria B2B e varejo unindo Design, Tráfego Pago e Tecnologia. O objetivo é claro: gerar posicionamento, reconhecimento de mercado e conversão contínua.
                             </p>
                             <p>
-                                Com um perfil analítico orientado por dados, todas as minhas decisões e planejamentos são baseados em performance, garantindo não apenas leads, mas oportunidades reais de negócio que impactam diretamente o faturamento.
+                                Com um perfil multidisciplinar, aplico estratégias personalizadas que transcendem o operacional. Construo ecossistemas digitais que preparam a sua marca para escalar e liderar em competitividade.
                             </p>
                         </div>
                     </div>

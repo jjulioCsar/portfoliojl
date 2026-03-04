@@ -1,0 +1,127 @@
+.how-i-work {
+    background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.how-i-work-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.how-i-work-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.how-i-work-header p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.process-step {
+    flex: 1;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    z-index: 2;
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(65, 105, 225, 0.1);
+    border-color: rgba(65, 105, 225, 0.4);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+    z-index: -1;
+}
+
+.step-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem auto;
+    background: rgba(65, 105, 225, 0.1);
+    border: 1px solid rgba(65, 105, 225, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover .step-icon-wrapper {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 20px rgba(65, 105, 225, 0.4);
+}
+
+.process-step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Connectors between steps */
+.step-connector {
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    width: 2rem;
+    height: 2px;
+    background: dashed 2px var(--border-color);
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 992px) {
+    .process-steps {
+        flex-wrap: wrap;
+    }
+
+    .process-step {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    .step-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .process-step {
+        width: 100%;
+    }
+}

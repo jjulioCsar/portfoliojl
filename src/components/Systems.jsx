@@ -40,8 +40,6 @@ const Systems = () => {
                     <h2>Sistemas & Aplicações</h2>
                     <p>
                         Ecossistemas digitais, sites e painéis desenvolvidos sob medida para necessidades específicas.
-                        <br />
-                        <span className="systems-disclaimer">*Alguns podem não estar funcionais por não estarem no ar.*</span>
                     </p>
                 </div>
 

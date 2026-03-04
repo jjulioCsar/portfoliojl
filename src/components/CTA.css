@@ -11,6 +11,11 @@
     overflow-x: clip;
 }
 
+.cta-project {
+    padding-top: 4rem;
+    border-top: none;
+}
+
 .cta::before {
     content: '';
     position: absolute;

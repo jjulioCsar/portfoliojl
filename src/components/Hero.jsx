@@ -19,8 +19,8 @@ const Hero = () => {
                         Integro criatividade, dados e tecnologia para transformar presença digital em crescimento real.
                     </p>
                     <div className="hero-cta reveal delay-200" style={{ gap: '2rem' }}>
-                        <a href="https://wa.me/5582991480837?text=Ol%C3%A1%20vim%20pelo%20seu%20portf%C3%B3lio%2C%20me%20interessei%20pelos%20seus%20servi%C3%A7os%2C%20queria%20saber%20de%20valores!" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-glow">Iniciar Projeto</a>
-                        <a href="#portfolio" className="btn btn-outline">Ver Projetos</a>
+                        <a href="https://wa.me/5582991480837?text=Ol%C3%A1%20vim%20pelo%20seu%20portf%C3%B3lio%2C%20me%20interessei%20pelos%20seus%20servi%C3%A7os%2C%20queria%20saber%20de%20valores!" target="_blank" rel="noopener noreferrer" aria-label="Iniciar Projeto via WhatsApp" className="btn btn-primary btn-glow">Iniciar Projeto</a>
+                        <a href="#portfolio" aria-label="Ver seção de projetos" className="btn btn-outline">Ver Projetos</a>
                     </div>
                 </div>
 

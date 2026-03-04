@@ -1,5 +1,6 @@
 .systems {
-    padding: var(--section-spacing) 0;
+    padding: 8rem 0;
+    padding-bottom: 8rem;
     position: relative;
     z-index: 2;
 }

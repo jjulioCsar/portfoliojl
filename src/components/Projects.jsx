@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useScrollReveal from '../hooks/useScrollReveal';
-import phjoiasCapa from '../assets/projects/phjoias-capa.webp';
-import techCapa from '../assets/projects/tech-capa.webp';
+import phjoiasLogo from '../assets/logos/LOGO PHJOIAS.jpg';
+import techLogo from '../assets/logos/TECHPLAST LOGO BRANCA.png';
+import tampLogo from '../assets/logos/1.png';
 import './Projects.css';
 
 const Projects = () => {
@@ -10,100 +12,71 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <div className="projects-header reveal">
+        <div className="projects-header reveal" style={{ marginBottom: '2rem' }}>
           <span className="section-subtitle">Experiência Aplicada</span>
           <h2>Projetos & Atuação Estratégica</h2>
           <p>
-            Minha atuação prática e resultados tangíveis estruturados para diferentes segmentos do mercado.
+            Minha atuação prática e resultados tangíveis estruturados para diferentes segmentos do mercado. Escolha um projeto para acessar os detalhes e métricas da operação.
           </p>
         </div>
 
         <div className="projects-blocks">
-          {/* Indústria B2B */}
-          <div className="project-block reveal">
-            <div className="project-info">
-              <h3>Projetos no Setor Industrial (B2B)</h3>
-              <p className="project-desc">
-                Estratégias avançadas para empresas do setor industrial focadas em atração, branding e posicionamento de mercado.
-              </p>
-              <ul className="project-activities">
-                <li className="reveal delay-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Desenvolvimento de identidade visual institucional
-                </li>
-                <li className="reveal delay-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Criação de materiais gráficos estratégicos
-                </li>
-                <li className="reveal delay-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Gestão de tráfego pago com foco em Reconhecimento, Autoridade e Conversão qualificada
-                </li>
-                <li className="reveal delay-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Planejamento editorial e agendamento estratégico de conteúdo
-                </li>
-                <li className="reveal delay-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Estruturação da comunicação digital
-                </li>
-                <li className="reveal delay-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Análise de insights e relatórios mensais de performance
-                </li>
-                <li className="reveal delay-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Idealização e desenvolvimento de sistemas internos para organização e eficiência do marketing
-                </li>
-              </ul>
+          {/* Tech Plast */}
+          <Link to="/project/tech-plast" style={{ textDecoration: 'none' }}>
+            <div className="project-block reveal">
+              <div className="project-info">
+                <h3>Setor Industrial <br /><span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}>Tech Plast</span></h3>
+                <p className="project-desc">
+                  Atuação estratégica no desenvolvimento de autoridade digital e captação B2B para indústria de moldes técnicos.
+                </p>
+                <div className="case-cta-link">
+                  <span>Ver Case Completo</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <div className="project-visual">
+                <img src={techLogo} alt="Logo Tech Plast" className="project-logo-img css-hover-lift" />
+              </div>
             </div>
-            <div className="project-visual">
-              <img src={techCapa} alt="Projetos B2B e Industrial" className="project-img-real css-hover-lift" />
+          </Link>
+
+          {/* Tamp Plast */}
+          <Link to="/project/tamp-plast" style={{ textDecoration: 'none' }}>
+            <div className="project-block reverse reveal">
+              <div className="project-info">
+                <h3>Setor Industrial <br /><span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}>Tamp Plast</span></h3>
+                <p className="project-desc">
+                  Digitalização de catálogo e expansão de mercado para fabricante de fechamentos plásticos.
+                </p>
+                <div className="case-cta-link">
+                  <span>Ver Case Completo</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <div className="project-visual">
+                <img src={tampLogo} alt="Logo Tamp Plast" className="project-logo-img css-hover-lift" />
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* Varejo PH Joias */}
-          <div className="project-block reverse reveal">
-            <div className="project-info">
-              <h3>Projetos no Varejo (PH Joias)</h3>
-              <p className="project-desc">
-                Soluções rápidas, criativas e focadas em conversão direta para um e-commerce de varejo altamente competitivo.
-              </p>
-              <ul className="project-activities">
-                <li className="reveal delay-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Estruturação estratégica do marketing
-                </li>
-                <li className="reveal delay-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Planejamento e execução de campanhas de tráfego pago
-                </li>
-                <li className="reveal delay-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Idealização de promoções e eventos comerciais (Ex: Black Friday VIP)
-                </li>
-                <li className="reveal delay-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Criação da identidade visual das campanhas
-                </li>
-                <li className="reveal delay-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Desenvolvimento completo da base criativa (artes e anúncios)
-                </li>
-                <li className="reveal delay-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Organização das ações de marketing (Omnichannel: Insta, TikTok, Site)
-                </li>
-                <li className="reveal delay-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Monitoramento e otimização de performance (ROI Mapeado)
-                </li>
-              </ul>
+          <Link to="/project/ph-joias" style={{ textDecoration: 'none' }}>
+            <div className="project-block reveal">
+              <div className="project-info">
+                <h3>Setor de Varejo <br /><span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}>PH Joias</span></h3>
+                <p className="project-desc">
+                  Supervisão de marketing e performance focada em conversão, branding premium e escala no varejo online.
+                </p>
+                <div className="case-cta-link">
+                  <span>Ver Case Completo</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+              <div className="project-visual">
+                <img src={phjoiasLogo} alt="Logo PH Joias" className="project-logo-img css-hover-lift" />
+              </div>
             </div>
-            <div className="project-visual">
-              <img src={phjoiasCapa} alt="Projetos Varejo PH Joias" className="project-img-real css-hover-lift" />
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

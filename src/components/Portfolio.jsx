@@ -13,14 +13,14 @@ import img7 from '../assets/webp/CAPA ANUNCIO PROMOÇÃO - SEM VIP.webp';
 import img8 from '../assets/webp/79.webp';
 
 const portfolioImages = [
-    { id: 1, src: img1, title: "", category: "DESIGN" },
-    { id: 2, src: img2, title: "", category: "DESIGN" },
-    { id: 3, src: img3, title: "", category: "DESIGN" },
-    { id: 4, src: img4, title: "", category: "DESIGN" },
-    { id: 5, src: img5, title: "", category: "DESIGN" },
-    { id: 6, src: img6, title: "", category: "DESIGN" },
-    { id: 7, src: img7, title: "", category: "DESIGN" },
-    { id: 8, src: img8, title: "", category: "DESIGN" },
+    { id: 1, src: img1, title: "Arte de campanha Dia do Consumidor", category: "DESIGN" },
+    { id: 2, src: img2, title: "Arte de campanha Dia das Mulheres", category: "DESIGN" },
+    { id: 3, src: img3, title: "Post social media Tamp Plast", category: "DESIGN" },
+    { id: 4, src: img4, title: "Capa de projeto Tech Plast", category: "DESIGN" },
+    { id: 5, src: img5, title: "Post carrossel Tamp Plast", category: "DESIGN" },
+    { id: 6, src: img6, title: "Post social media Tech Plast", category: "DESIGN" },
+    { id: 7, src: img7, title: "Anúncio de promoção", category: "DESIGN" },
+    { id: 8, src: img8, title: "Campanha Black Friday", category: "DESIGN" },
 ];
 
 const Portfolio = ({ openLightbox }) => {
@@ -42,12 +42,12 @@ const Portfolio = ({ openLightbox }) => {
                     {extendedList.map((item, index) => (
                         <div
                             key={`${item.id}-${index}`}
-                            className="portfolio-card"
+                            className="portfolio-card css-hover-lift"
                             onClick={() => openLightbox(item.src)}
                             style={{ cursor: 'pointer' }}
                         >
                             <div className="portfolio-card-inner">
-                                <img src={item.src} alt={item.category} className="portfolio-card-img" />
+                                <img src={item.src} alt={item.title} className="portfolio-card-img" />
                                 <div className="portfolio-card-overlay">
                                     <span className="portfolio-category">{item.category}</span>
                                 </div>

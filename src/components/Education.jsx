@@ -19,19 +19,39 @@ const certs = [
 const educationData = [
     {
         degree: "Técnico em Desenvolvimento Web",
-        school: "SENAI"
+        school: "SENAI Alagoas",
+        period: "2022 - 2023",
+        highlights: ["Foco em UI/UX e Frontend", "Desenvolvimento de Projetos Reais"]
     },
     {
         degree: "Certificação Social Media",
-        school: "O Novo Mercado"
+        school: "O Novo Mercado",
+        period: "2023 - 2024",
+        highlights: ["Estratégia de Conteúdo", "Gestão de Comunidades e Ads"]
     }
 ];
 
-const skills = [
-    "Figma", "Canva", "Meta Ads",
-    "Gerenciamento de Redes Sociais",
-    "Análise de Dados", "Notion", "Excel",
-    "Google Antigravity", "HTML", "CSS", "JavaScript"
+const skillCategories = [
+    {
+        title: "Design & UX",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>,
+        skills: ["Figma", "Canva", "Adobe Suite", "Branding"]
+    },
+    {
+        title: "Performance & Ads",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="20" x2="12" y2="10" /><line x1="18" y1="20" x2="18" y2="4" /><line x1="6" y1="20" x2="6" y2="16" /></svg>,
+        skills: ["Meta Ads", "Google Ads", "Análise de Métricas", "ROI"]
+    },
+    {
+        title: "Tech & Data",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>,
+        skills: ["JavaScript", "HTML/CSS", "Notion", "Excel/Dados"]
+    },
+    {
+        title: "Estratégia B2B",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>,
+        skills: ["Gestão de Redes", "Funil de Vendas", "Conversão B2B", "Copywriting"]
+    }
 ];
 
 const Education = ({ openLightbox }) => {
@@ -45,34 +65,51 @@ const Education = ({ openLightbox }) => {
                     <h2>Formação & Base Técnica</h2>
                 </div>
 
-                <div className="education-grid">
-                    {/* Formação Acadêmica */}
-                    <div className="education-column reveal delay-100">
-                        <div className="column-card">
-                            <h3>Formação Acadêmica</h3>
-                            <div className="timeline">
+                <div className="bento-education-grid">
+                    {/* Bento Item: Formação Acadêmica */}
+                    <div className="bento-item formation-card reveal">
+                        <div className="bento-inner">
+                            <div className="bento-header">
+                                <span className="bento-label">Trajetória</span>
+                                <h3>Formação Acadêmica</h3>
+                            </div>
+                            <div className="bento-timeline">
                                 {educationData.map((item, index) => (
-                                    <div key={index} className="timeline-item">
-                                        <div className="timeline-dot"></div>
-                                        <h4>{item.degree}</h4>
-                                        <span className="timeline-org">{item.school}</span>
+                                    <div key={index} className="bento-timeline-item">
+                                        <div className="timeline-info">
+                                            <span className="timeline-date-v2">{item.period}</span>
+                                            <h4>{item.degree}</h4>
+                                            <span className="timeline-school">{item.school}</span>
+                                        </div>
+                                        <div className="timeline-highlights">
+                                            {item.highlights.map((h, i) => (
+                                                <span key={i} className="h-tag">{h}</span>
+                                            ))}
+                                        </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </div>
 
-                    {/* Base Técnica */}
-                    <div className="education-column reveal delay-200">
-                        <div className="column-card">
-                            <h3>Base Técnica</h3>
-                            <div className="skills-grid">
-                                {skills.map((skill, index) => (
-                                    <div key={index} className={`skill-card css-hover-lift delay-${(index % 3 + 1) * 100}`}>{skill}</div>
-                                ))}
+                    {/* Bento Items: Skill Categories */}
+                    {skillCategories.map((cat, index) => (
+                        <div key={index} className={`bento-item skill-cat-card reveal delay-${(index + 1) * 100}`}>
+                            <div className="bento-inner">
+                                <div className="cat-icon-wrapper">
+                                    {cat.icon}
+                                </div>
+                                <div className="bento-header">
+                                    <h3>{cat.title}</h3>
+                                </div>
+                                <div className="cat-skills-list">
+                                    {cat.skills.map((skill, sIdx) => (
+                                        <span key={sIdx} className="cat-skill-tag">{skill}</span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
 
                 {/* Certificações */}
