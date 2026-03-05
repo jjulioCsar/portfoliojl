@@ -162,6 +162,33 @@ const ProjectDetail = () => {
                                 </div>
                             )}
 
+                            {/* Gallery Section */}
+                            {project.gallery && (
+                                <div className="case-gallery reveal active" style={{ marginTop: '5rem', paddingTop: '4rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                                    <h4>Design & Identidade Visual Extrapolando o Digital</h4>
+                                    <p style={{ marginBottom: '2rem', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Peças criadas com foco em branding físico, expandindo o posicionamento da marca e gerando autoridade visual pelo mundo a fora.</p>
+                                    <div className="gallery-showcase" style={{ marginTop: '2rem' }}>
+                                        {project.gallery.map((item, idx) => (
+                                            <div key={idx} className="gallery-item-standalone" style={{ overflow: 'hidden', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
+                                                <img
+                                                    src={item.src}
+                                                    alt={item.alt}
+                                                    title={item.title}
+                                                    style={{
+                                                        width: '100%',
+                                                        maxWidth: 'none',
+                                                        height: 'auto',
+                                                        display: 'block',
+                                                        transition: 'transform 0.5s ease'
+                                                    }}
+                                                    className="project-logo-detail-img"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,8 @@
 import phLogo from '../assets/logos/LOGO PHJOIAS.jpg';
 import techLogo from '../assets/logos/TECHPLAST LOGO BRANCA.png';
 import tampLogo from '../assets/logos/1.png';
+import truckTampImage from '../assets/cases/truck-tamp.png';
+import truckTechImage from '../assets/cases/truck-tech.png';
 
 export const projectsData = {
     'tech-plast': {
@@ -31,7 +33,14 @@ export const projectsData = {
                 featured: true
             }
         ],
-        highlight: 'A Tech Plast consolidou-se como referência em moldaria técnica, utilizando o marketing para encurtar a distância entre a engenharia da fábrica e o departamento de compras de grandes players.'
+        highlight: 'A Tech Plast consolidou-se como referência em moldaria técnica, utilizando o marketing para encurtar a distância entre a engenharia da fábrica e o departamento de compras de grandes players.',
+        gallery: [
+            {
+                src: truckTechImage,
+                title: 'Design de Plotagem de Caminhão',
+                alt: 'Caminhão plotado com a identidade visual da Tech Plast'
+            }
+        ]
     },
     'tamp-plast': {
         id: 'tamp-plast',
@@ -61,7 +70,14 @@ export const projectsData = {
                 featured: true
             }
         ],
-        highlight: 'Com a Tamp Plast, o marketing serviu como motor de expansão, levando o catálogo de tampas a novas regiões e garantindo que a marca fosse a primeira opção em fechamentos plásticos no digital.'
+        highlight: 'Com a Tamp Plast, o marketing serviu como motor de expansão, levando o catálogo de tampas a novas regiões e garantindo que a marca fosse a primeira opção em fechamentos plásticos no digital.',
+        gallery: [
+            {
+                src: truckTampImage,
+                title: 'Design de Plotagem de Caminhão',
+                alt: 'Caminhão plotado com a identidade visual da Tamp Plast'
+            }
+        ]
     },
     'ph-joias': {
         id: 'ph-joias',
