@@ -18,16 +18,22 @@ const certs = [
 
 const educationData = [
     {
-        degree: "Técnico em Desenvolvimento Web",
-        school: "SENAI Alagoas",
-        period: "2022 - 2023",
-        highlights: ["Foco em UI/UX e Frontend", "Desenvolvimento de Projetos Reais"]
+        degree: "Marketing",
+        school: "Estácio",
+        period: "2026 - Até o momento",
+        highlights: ["Estratégia Digital", "Comportamento do Consumidor"]
     },
     {
         degree: "Certificação Social Media",
         school: "O Novo Mercado",
-        period: "2023 - 2024",
+        period: "2025 - Até o momento",
         highlights: ["Estratégia de Conteúdo", "Gestão de Comunidades e Ads"]
+    },
+    {
+        degree: "Técnico em Desenvolvimento Web",
+        school: "SENAI Alagoas",
+        period: "2023 - 2024",
+        highlights: ["Foco em UI/UX e Frontend", "Desenvolvimento de Projetos Reais"]
     }
 ];
 
