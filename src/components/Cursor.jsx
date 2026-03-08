@@ -39,6 +39,10 @@ const Cursor = () => {
         };
     }, []);
 
+    if (window.matchMedia('(pointer: coarse)').matches) {
+        return null;
+    }
+
     return (
         <>
             <div

@@ -1,6 +1,6 @@
 import React from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
-import fotoPerfilPNG from '../assets/personal/FOTO PERFIL JL.webp';
+import fotoPerfilPNG from '../assets/personal/PERFIL_INSTA-removebg-preview.png';
 import './Hero.css';
 
 const Hero = () => {

@@ -1,6 +1,6 @@
 .hero {
-    padding: 10rem 0 0;
-    /* No bottom padding to let photo touch the edge if needed */
+    padding: 10rem 0 6rem;
+    /* Balanced vertical rhythm */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -43,6 +43,19 @@
     line-height: 1.1;
     font-weight: 900;
     letter-spacing: -0.03em;
+    animation: heroReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-title span {
@@ -74,14 +87,16 @@
     max-width: 750px;
     /* Massive photo impact */
     margin-right: 0;
+    background: radial-gradient(circle at center, rgba(65, 105, 225, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
 }
 
 .hero-main-photo {
     width: 100%;
     height: auto;
     display: block;
-    filter: drop-shadow(0 20px 80px rgba(0, 0, 0, 0.6));
-    mask-image: linear-gradient(to top, transparent 5%, black 25%);
+    filter: drop-shadow(0 20px 80px rgba(0, 0, 0, 0.6)) brightness(1.1);
+    mask-image: linear-gradient(to top, transparent 0%, black 15%);
     /* Cleaner fade than overlay */
 }
 
@@ -129,7 +144,7 @@
     }
 
     .hero-title {
-        font-size: clamp(2rem, 8vw, 3rem);
+        font-size: clamp(2rem, 8vw, 2.8rem);
         margin-bottom: 1.5rem;
     }
 
@@ -139,6 +154,9 @@
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
+        color: var(--text-main);
+        /* Increased brightness for better contrast */
+        opacity: 0.95;
     }
 
     .hero-cta {
@@ -153,29 +171,37 @@
         width: 100%;
     }
 
+    .hero-cta {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        justify-content: center;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
     .hero-cta .btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
-        flex: 0 1 auto;
-        white-space: nowrap;
-        min-width: fit-content;
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
     }
 
     .hero-image-wrapper {
         justify-content: center;
     }
 
-    .hero-img {
-        aspect-ratio: 1/1;
-        max-width: 450px;
-        border-radius: 50%;
-        /* Make circular on mobile for variation */
+    .hero-main-photo {
+        /* Remove circular crop to keep the premium fade effect */
+        border-radius: 0;
+        mask-image: linear-gradient(to top, transparent 0%, black 20%);
     }
 
-    .hero-photo-wrapper {
-        width: 80%;
-        max-width: 350px;
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 450px;
         order: -1;
+        margin-bottom: 2rem;
     }
 
     .bg-glow {

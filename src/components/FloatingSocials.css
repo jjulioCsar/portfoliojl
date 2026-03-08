@@ -1,0 +1,146 @@
+.floating-socials-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.floating-socials-container.is-open .social-options {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.fab-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.fab-item:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-fab {
+    background-color: #25D366;
+}
+
+.whatsapp-fab:hover {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.instagram-fab {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.instagram-fab:hover {
+    box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+}
+
+.linkedin-fab {
+    background-color: #0077b5;
+}
+
+.linkedin-fab:hover {
+    box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
+}
+
+.fab-main-button {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(65, 105, 225, 0.4);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fab-pulse 2s ease-in-out infinite;
+    position: relative;
+}
+
+.fab-main-button:hover {
+    transform: scale(1.05);
+    background-color: #5c82ff;
+}
+
+.fab-icon-message,
+.fab-icon-close {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.fab-icon-close {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0);
+}
+
+.floating-socials-container.is-open .fab-icon-message {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+}
+
+.floating-socials-container.is-open .fab-icon-close {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+.floating-socials-container.is-open .fab-main-button {
+    animation: none;
+    background-color: #222;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+@keyframes fab-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 20px rgba(65, 105, 225, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 4px 30px rgba(65, 105, 225, 0.6), 0 0 0 10px rgba(65, 105, 225, 0.1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-socials-container {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .fab-main-button {
+        width: 55px;
+        height: 55px;
+    }
+
+    .fab-item {
+        width: 45px;
+        height: 45px;
+    }
+}

@@ -19,18 +19,37 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
     align-items: center;
-    background: var(--bg-card);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 2.5rem;
     border-radius: var(--bento-radius);
-    border: var(--bento-border);
-    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(65, 105, 225, 0.06), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .project-block:hover {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 255, 255, 0.02) inset;
-    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(65, 105, 225, 0.05);
+    border-color: rgba(65, 105, 225, 0.3);
+    transform: translateY(-5px);
+}
+
+.project-block:hover::before {
+    opacity: 1;
 }
 
 /* Case Study Page Restorations */

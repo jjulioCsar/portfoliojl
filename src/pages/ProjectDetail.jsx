@@ -39,6 +39,17 @@ const ProjectDetail = () => {
                         <span className="case-badge">{project.subtitle}</span>
                         <h1>{project.title}</h1>
                         <p>{project.context}</p>
+                        {project.siteUrl && (
+                            <a
+                                href={project.siteUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-primary"
+                                style={{ marginTop: '1.5rem', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '1px' }}
+                            >
+                                Visitar Site Oficial
+                            </a>
+                        )}
                     </div>
 
                     <div className="project-detail-visual reveal active">
