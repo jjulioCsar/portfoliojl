@@ -12,9 +12,33 @@ const systemsData = [
         )
     },
     {
+        title: "Tampplast",
+        description: "Site institucional e catálogo digital para indústria de fechamentos plásticos.",
+        url: "https://www.tampplast.com.br",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        )
+    },
+    {
         title: "Techplast",
         description: "Site de apresentação institucional desenvolvido com foco em velocidade e design premium.",
-        url: "https://techplastembalagens.com.br",
+        url: "https://www.techplastembalagens.com.br",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        )
+    },
+    {
+        title: "Injetech",
+        description: "Website institucional para a nova divisão de injeção plástica do grupo Tampplast.",
+        url: "https://www.injetechbrasil.com.br",
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        )
+    },
+    {
+        title: "Taywan Nascimento",
+        description: "Plataforma profissional unificada para serviços e consultoria de alta performance.",
+        url: "https://www.teamtaywannascimento.com.br",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
         )

@@ -11,6 +11,11 @@
     padding: 0 2rem;
 }
 
+.portfolio-carousel-wrapper {
+    position: relative;
+    width: 100%;
+}
+
 .portfolio-carousel-container {
     width: 100vw;
     position: relative;
@@ -18,7 +23,65 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.portfolio-carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Pause animation when user is interacting or manual scrolling */
+.portfolio-carousel-container:active .portfolio-track,
+.portfolio-carousel-container:focus .portfolio-track {
+    animation-play-state: paused;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: var(--transition);
+    opacity: 0;
+    backdrop-filter: blur(5px);
+}
+
+.portfolio-carousel-wrapper:hover .nav-btn {
+    opacity: 1;
+}
+
+.nav-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-main);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn.prev {
+    left: 2rem;
+}
+
+.nav-btn.next {
+    right: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-btn {
+        display: none; /* Better to use touch swipe on mobile */
+    }
 }
 
 .portfolio-track {
@@ -46,6 +109,7 @@
     flex: 0 0 500px;
     height: 600px;
     padding: 0 10px;
+    scroll-snap-align: start;
     /* Slight horizontal padding for gap consistency */
 }
 
