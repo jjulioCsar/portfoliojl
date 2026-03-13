@@ -1,6 +1,5 @@
 .systems {
-    padding: 8rem 0;
-    padding-bottom: 8rem;
+    padding: 10rem 0;
     position: relative;
     z-index: 2;
 }
@@ -83,6 +82,7 @@
 .btn-system {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     color: var(--primary);
     font-weight: 600;
@@ -91,6 +91,7 @@
     transition: all 0.3s ease;
     padding: 0.5rem 0;
     border-bottom: 1px solid transparent;
+    line-height: normal;
 }
 
 .btn-system:hover {
